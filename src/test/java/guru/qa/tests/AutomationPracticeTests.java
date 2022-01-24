@@ -23,7 +23,7 @@ public class AutomationPracticeTests extends TestBase {
             .selectSubject(testData.getSubject2())
             .selectHobby(testData.getHobby1())
             .selectHobby(testData.getHobby2())
-            .uploadPicture(testData.getPicture())
+            //.uploadPicture(testData.getPicture())
             .setCurrentAddress(testData.getAddress())
             .selectState(testData.getState())
             .selectCity(testData.getCity())
