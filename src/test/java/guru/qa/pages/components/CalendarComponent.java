@@ -1,6 +1,7 @@
 package guru.qa.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
+import guru.qa.pages.StudentRegistrationFormPage;
 
 import static com.codeborne.selenide.Selenide.$;
 
