@@ -6,7 +6,6 @@ import guru.qa.pages.StudentRegistrationFormPage;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarComponent {
-    //$("#dateOfBirthInput").click();
     SelenideElement
             monthPicker = $(".react-datepicker__month-select"),
             yearPicker = $(".react-datepicker__year-select");

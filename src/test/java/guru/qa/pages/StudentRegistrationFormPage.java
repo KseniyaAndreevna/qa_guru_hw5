@@ -43,7 +43,7 @@ public class StudentRegistrationFormPage {
     public CalendarComponent calendarComponent = new CalendarComponent();
 
     public StudentRegistrationFormPage openPage() {
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         return this;
     }

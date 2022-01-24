@@ -4,7 +4,7 @@ import guru.qa.pages.StudentRegistrationFormPage;
 import guru.qa.testData.TestDataForStudentRegistrationFormPage;
 import org.junit.jupiter.api.Test;
 
-public class AutomationPracticeTests {
+public class AutomationPracticeTests extends TestBase {
 
     StudentRegistrationFormPage studentRegistrationFormPage = new StudentRegistrationFormPage();
 
