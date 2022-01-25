@@ -45,10 +45,10 @@ public class TestDataForStudentRegistrationFormPage {
     String subject2 = "Math";
 
     @Getter
-    String hobby1 = Hobbies.random();
+    String hobby1 = "Sports";//Hobbies.random();
 
     @Getter
-    String hobby2 = Hobbies.random();
+    String hobby2 = "Music";//Hobbies.random();
 
     @Getter
     String picture = "kitten.png";

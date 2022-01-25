@@ -2,6 +2,7 @@ package guru.qa.tests;
 
 import guru.qa.pages.StudentRegistrationFormPage;
 import guru.qa.testData.TestDataForStudentRegistrationFormPage;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class AutomationPracticeTests extends TestBase {
@@ -10,6 +11,7 @@ public class AutomationPracticeTests extends TestBase {
 
     TestDataForStudentRegistrationFormPage testData = new TestDataForStudentRegistrationFormPage();
 
+    @Tag("StudentRegistrationForm")
     @Test
     void automationPracticeTest() {
         studentRegistrationFormPage.openPage()
@@ -38,7 +40,7 @@ public class AutomationPracticeTests extends TestBase {
                         testData.getMonthOfBirth() + "," + testData.getYearOfBirth())
                 .checkResultsValue("Subjects", testData.getSubject1() + ", " + testData.getSubject2())
                 .checkResultsValue("Hobbies", testData.getHobby1() + ", " + testData.getHobby2())
-                .checkResultsValue("Picture", testData.getPicture())
+                //.checkResultsValue("Picture", testData.getPicture())
                 .checkResultsValue("State and City", testData.getState() + " " + testData.getCity());
     }
 }
