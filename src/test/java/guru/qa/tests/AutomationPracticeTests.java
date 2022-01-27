@@ -15,21 +15,21 @@ public class AutomationPracticeTests extends TestBase {
     @Test
     void automationPracticeTest() {
         studentRegistrationFormPage.openPage()
-            .setFirstName(testData.getFirstName())
-            .setLastName(testData.getLastName())
-            .setUserEmail(testData.getUserEmail())
-            .selectGender(testData.getUserGender())
-            .setMobileNumber(testData.getPhoneNumber())
-            .setDateOfBirth(testData.getYearOfBirth(), testData.getMonthOfBirth(), testData.getDateOfBirth())
-            .selectSubject(testData.getSubject1())
-            .selectSubject(testData.getSubject2())
-            .selectHobby(testData.getHobby1())
-            .selectHobby(testData.getHobby2())
-            //.uploadPicture(testData.getPicture())
-            .setCurrentAddress(testData.getAddress())
-            .selectState(testData.getState())
-            .selectCity(testData.getCity())
-            .clickSubmitButton();
+                .setFirstName(testData.getFirstName())
+                .setLastName(testData.getLastName())
+                .setUserEmail(testData.getUserEmail())
+                .selectGender(testData.getUserGender())
+                .setMobileNumber(testData.getPhoneNumber())
+                .setDateOfBirth(testData.getYearOfBirth(), testData.getMonthOfBirth(), testData.getDateOfBirth())
+                .selectSubject(testData.getSubject1())
+                .selectSubject(testData.getSubject2())
+                .selectHobby(testData.getHobby1())
+                .selectHobby(testData.getHobby2())
+                //.uploadPicture(testData.getPicture())
+                .setCurrentAddress(testData.getAddress())
+                .selectState(testData.getState())
+                .selectCity(testData.getCity())
+                .clickSubmitButton();
 
         studentRegistrationFormPage
                 .checkResultsValue("Student Name", testData.getFirstName() + " " + testData.getLastName())
