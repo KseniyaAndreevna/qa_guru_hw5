@@ -20,13 +20,13 @@ public class TestBase {
         String browserWithVersion = System.getProperty("browserWithVersion", "chrome:90.0");
         String browser = browserWithVersion.split(":")[0];
         String version = browserWithVersion.split(":")[1];
-
+        String browserSize = System.getProperty("browserSize", "1920x1080");
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.browser = System.getProperty("browser", browser);
         Configuration.browserVersion = System.getProperty("browserVersion", version);
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = browserSize;
         Configuration.remote = "https://" + login + ":" + password + "@" + remoteUrl;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
