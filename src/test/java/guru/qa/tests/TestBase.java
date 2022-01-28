@@ -17,10 +17,14 @@ public class TestBase {
         String login = System.getProperty("login");
         String password = System.getProperty("password");
         String remoteUrl = System.getProperty("remoteUrl");
+        String browserWithVersion = System.getProperty("browserWithVersion", "chrome: 90.0");
+        String browser = browserWithVersion.split(": ")[0];
+        String version = browserWithVersion.split(": ")[1];
+
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "90.0");
+        Configuration.browser = System.getProperty("browser", browser);
+        Configuration.browserVersion = System.getProperty("browserVersion", version);
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://" + login + ":" + password +
