@@ -2,6 +2,7 @@ package guru.qa.tests;
 
 import guru.qa.pages.StudentRegistrationFormPage;
 import guru.qa.testData.TestDataForStudentRegistrationFormPage;
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -12,6 +13,7 @@ public class AutomationPracticeTests extends TestBase {
     TestDataForStudentRegistrationFormPage testData = new TestDataForStudentRegistrationFormPage();
 
     @Tag("StudentRegistrationForm")
+    @Description("Run with browser {browser}")
     @Test
     void automationPracticeTest() {
         studentRegistrationFormPage.openPage()
