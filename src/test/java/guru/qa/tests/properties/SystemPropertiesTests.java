@@ -7,7 +7,7 @@ public class SystemPropertiesTests {
 
     @Tag("properties")
     @Test
-    void someTestProperties() {
+    void someTestProperties1() {
         String browser = System.getProperty("browser");
         System.out.println(browser);
         //  gradlew clean properties_tests
@@ -17,6 +17,19 @@ public class SystemPropertiesTests {
         //  chrome
     }
 
+    @Test
+    @Tag("properties")
+    void someTestProperties2() {
+        String browser = System.getProperty("browser", "chrome");
+        String version = System.getProperty("version", "91");
+        String browserSize = System.getProperty("browserSize", "300x300");
+
+        System.out.println(browser);
+        System.out.println(version);
+        System.out.println(browserSize);
+    }
+
+
     @Tag("try")
     @Test
     void someTestTry() {
@@ -25,8 +38,6 @@ public class SystemPropertiesTests {
         //  null
 
         //  gradlew clean properties_tests -Dbrowser=chrome
-        //  chrome
+
     }
-
-
 }
