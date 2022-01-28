@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class SystemPropertiesTests {
 
     @Tag("properties")
-    @Test
+    //@Test
     void someTestProperties1() {
         String browser = System.getProperty("browser");
         System.out.println(browser);
@@ -17,7 +17,7 @@ public class SystemPropertiesTests {
         //  chrome
     }
 
-    @Test
+    //@Test
     @Tag("properties")
     void someTestProperties2() {
         String browser = System.getProperty("browser", "chrome");
@@ -31,7 +31,7 @@ public class SystemPropertiesTests {
 
 
     @Tag("try")
-    @Test
+    //@Test
     void someTestTry() {
         System.out.println("Ksusha");
         //  gradlew clean try_tests
