@@ -19,6 +19,8 @@ public class TestBase {
         String remoteUrl = System.getProperty("remoteUrl");
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "90.0");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://" + login + ":" + password +
