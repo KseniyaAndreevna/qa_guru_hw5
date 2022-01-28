@@ -1,5 +1,6 @@
 package guru.qa.tests;
 
+import com.codeborne.selenide.Configuration;
 import guru.qa.pages.StudentRegistrationFormPage;
 import guru.qa.testData.TestDataForStudentRegistrationFormPage;
 import io.qameta.allure.Description;
@@ -16,6 +17,8 @@ public class AutomationPracticeTests extends TestBase {
     @Description("Run with browser {browser}")
     @Test
     void automationPracticeTest() {
+        String browser = Configuration.browser;
+
         studentRegistrationFormPage.openPage()
                 .setFirstName(testData.getFirstName())
                 .setLastName(testData.getLastName())
