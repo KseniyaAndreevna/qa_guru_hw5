@@ -23,8 +23,8 @@ public class TestBase {
         String browserSize = System.getProperty("browserSize", "1920x1080");
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.browser = System.getProperty("browser", browser);
-        Configuration.browserVersion = System.getProperty("browserVersion", version);
+        Configuration.browser = browser;
+        Configuration.browserVersion = version;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = browserSize;
         Configuration.remote = "https://" + login + ":" + password + "@" + remoteUrl;
