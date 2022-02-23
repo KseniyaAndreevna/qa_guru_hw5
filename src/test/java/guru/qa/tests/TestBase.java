@@ -18,13 +18,8 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        System.out.println("setUp()");
-        //String login = System.getProperty("login");
         String login = config.login();
-        //String password = System.getProperty("password");
         String password = config.password();
-        System.out.println("login: " + login);
-        System.out.println("password: " + password);
         String remoteUrl = System.getProperty("remoteUrl");
         String browserWithVersion = System.getProperty("browserWithVersion", "chrome:90.0");
         String browser = browserWithVersion.split(":")[0];
